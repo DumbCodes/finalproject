@@ -1,16 +1,20 @@
-#Running the Codes
+# Running the Codes
 
 These codes creates, home, registration and login page, 
 but going from one page to another requires changing of the code in APP.JSX
 
-##Go to SRC
+## Go to SRC
 ## App.jsx
-## change from "return <Home />" to 
-Either "return <Login />" or "return <Register />"
+### Change from "Home" to 
+### Either "Login" 
+### Or "Register"
 
-
+Functionalities of the pages will be added in the database design part.
 
 --------------------------------------------------------------------------------------------------
+.....
+
+
 
 # Getting Started with Create React App
 
