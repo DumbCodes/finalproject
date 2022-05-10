@@ -1,3 +1,17 @@
+#Running the Codes
+
+These codes creates, home, registration and login page, 
+but going from one page to another requires changing of the code in APP.JSX
+
+##Go to SRC
+## App.jsx
+## change from "return <Home />" to 
+Either "return <Login />" or "return <Register />
+
+
+
+--------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
