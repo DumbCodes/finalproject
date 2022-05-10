@@ -6,7 +6,7 @@ but going from one page to another requires changing of the code in APP.JSX
 ##Go to SRC
 ## App.jsx
 ## change from "return <Home />" to 
-Either "return <Login />" or "return <Register />
+Either "return <Login />" or "return <Register />"
 
 
 
