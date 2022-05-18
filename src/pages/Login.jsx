@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#1313137d, #0000007d),
-    url("./public/images/loginimg.jpg") center;
+    url("./images/loginimg.jpg") center;
   background-size: cover;
 
   display: flex;
@@ -13,7 +13,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-//Conatiner for Login Items
+//Container for Login Items
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
@@ -45,6 +45,7 @@ const Button = styled.button`
   background-color: #151515;
   color: white;
   margin: 10px 0px;
+  cursor: pointer;
 `;
 
 const Link = styled.a`

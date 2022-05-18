@@ -2,10 +2,12 @@ import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 import { Badge } from "@mui/material";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
   color: white;
+  ${mobile({ height: "50px" })}
 `;
 
 const Wrapper = styled.div`
@@ -13,6 +15,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({ padding: "10px, 0px" })}
 `;
 //Logo container
 const Left = styled.div`
@@ -22,6 +25,7 @@ const Logo = styled.img`
   width: 150px;
   margin-left: 5px;
   cursor: pointer;
+  ${mobile({ width: "70px" })}
 `;
 
 // Central option's Container
@@ -29,11 +33,13 @@ const Center = styled.div`
   flex: 1.5;
   display: flex;
   align-items: center;
+  justify-content: center;
+  ${mobile({ display: "none" })}
 `;
 const PageItems = styled.div`
   font-size: 16px;
   cursor: pointer;
-  margin: 25px;
+  margin: 15px;
 `;
 
 // Search, Sign up and cart Container
@@ -42,6 +48,7 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ justifyContent: "center", flex: "3" })}
 `;
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
@@ -53,11 +60,13 @@ const SearchContainer = styled.div`
 `;
 const Input = styled.input`
   border: none;
+  ${mobile({ width: "70px" })}
 `;
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin: 25px;
+  ${mobile({ fontSize: "12px", margin: "5px" })}
 `;
 
 const Navbar = () => {
@@ -65,20 +74,19 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Logo src="./public/images/logo.png" alt="" />
+          <Logo src="./images/logo.png" alt="" />
         </Left>
 
         <Center>
           <PageItems>Collection</PageItems>
-          <PageItems>New Arrival</PageItems>
-          <PageItems>Customization</PageItems>
           <PageItems>Products</PageItems>
-          <PageItems>Book a Visit</PageItems>
+          <PageItems>Booking</PageItems>
+          <PageItems>About Us</PageItems>
         </Center>
 
         <Right>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search" />
             <Search style={{ color: "white", fontSize: 16 }} />
           </SearchContainer>
 

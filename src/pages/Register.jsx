@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#1313137d, #0000007d),
-    url("./public/images/regimg.jpg") center;
+    url("./images/regimg.jpg") center;
   background-size: cover;
   display: flex;
   align-items: center;
