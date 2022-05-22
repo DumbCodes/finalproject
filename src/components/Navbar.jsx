@@ -102,7 +102,7 @@ const Navbar = () => {
             <MenuItem>Log In</MenuItem>
           </Link>
           <MenuItem>
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={3} color="secondary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
