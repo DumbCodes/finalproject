@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Badge } from "@mui/material";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -37,6 +38,7 @@ const Center = styled.div`
   ${mobile({ display: "none" })}
 `;
 const PageItems = styled.div`
+  color: white;
   font-size: 16px;
   cursor: pointer;
   margin: 15px;
@@ -63,6 +65,7 @@ const Input = styled.input`
   ${mobile({ width: "70px" })}
 `;
 const MenuItem = styled.div`
+  color: white;
   font-size: 14px;
   cursor: pointer;
   margin: 25px;
@@ -79,8 +82,11 @@ const Navbar = () => {
 
         <Center>
           <PageItems>Collection</PageItems>
+
           <PageItems>Products</PageItems>
-          <PageItems>Booking</PageItems>
+          <Link to="/booking">
+            <PageItems>Booking</PageItems>
+          </Link>
           <PageItems>About Us</PageItems>
         </Center>
 
@@ -89,11 +95,12 @@ const Navbar = () => {
             <Input placeholder="Search" />
             <Search style={{ color: "white", fontSize: 16 }} />
           </SearchContainer>
-
-          <MenuItem>Register</MenuItem>
-
-          <MenuItem>Sign In</MenuItem>
-
+          <Link to="/register">
+            <MenuItem>Register</MenuItem>
+          </Link>
+          <Link to="/login">
+            <MenuItem>Log In</MenuItem>
+          </Link>
           <MenuItem>
             <Badge badgeContent={4} color="secondary">
               <ShoppingCartOutlined />

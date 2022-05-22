@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { login } from "../redux/apiCalls";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -46,9 +48,13 @@ const Button = styled.button`
   color: white;
   margin: 10px 0px;
   cursor: pointer;
+  & :disabled {
+    color: green;
+    cursor: not-allowed;
+  }
 `;
 
-const Link = styled.a`
+const Links = styled.a`
   margin: 5px 0px;
   font-size: 12px;
   text-decoration: underline;
@@ -56,18 +62,35 @@ const Link = styled.a`
 `;
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    login();
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>LOG IN</Title>
         <Form>
-          <Input placeholder="Username" />
-          <Input type="password" placeholder="Password" />
+          <Input
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-          <Button>Sign In</Button>
+          <Button onClick={handleClick}>Sign In</Button>
 
-          <Link>Forget Password?</Link>
-          <Link>Create new account</Link>
+          <Links>Forget Password?</Links>
+          <Link to="/register">
+            <Links>Create new account</Links>
+          </Link>
         </Form>
       </Wrapper>
     </Container>
